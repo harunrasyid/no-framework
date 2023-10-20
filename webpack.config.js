@@ -77,8 +77,14 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        type: "asset",
+        test: /\.(glsl|frag|vert)$/i,
+        loader: "raw-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(glsl|frag|vert)$/i,
+        loader: "glslify-loader",
+        exclude: /node_modules/,
       },
     ],
   },
