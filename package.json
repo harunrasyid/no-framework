@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run development",
-    "development": "webpack-dev-server --progress --config webpack.config.development.js",
-    "build": "webpack --progress --config webpack.config.build.js"
+    "backend:build": "node app.js",
+    "backend:development": "nodemon app.js",
+    "frontend:development": "webpack-dev-server --progress --config webpack.config.development.js",
+    "frontend:build": "webpack --progress --config webpack.config.build.js"
   },
   "author": "",
   "license": "ISC",
@@ -38,5 +40,9 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   }
 }
